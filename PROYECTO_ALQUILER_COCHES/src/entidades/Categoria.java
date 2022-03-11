@@ -57,7 +57,7 @@ public class Categoria implements Serializable{
 	@Override
 	//METODO TOSTRING
 	public String toString() {
-		return("CÓDIGO: "+codigo+" | DESCRIPCIÓN: "+descripcion+" | RECARGO: "+recargo);
+		return("CÓDIGO: "+codigo+" | DESCRIPCIÓN: "+descripcion+" | RECARGO %: "+recargo);
 	}
 	
 }

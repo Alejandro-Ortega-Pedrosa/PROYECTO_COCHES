@@ -61,9 +61,13 @@ public class Coche_electrico extends Electrico implements Serializable{
 	}
 
 	@Override
+	/**
+	 * MÉTODO PARA CALCULAR EL ALQUILER DEL COCHE ELÉTRICO
+	 */
 	public double calculaAlquiler(int diferencia) {
 		
-		double precio=diferencia*50;			     
+		double precio=diferencia*50;	
+		precio=(precio*getCategoria().getRecargo())/100;
 		precio*=1.15;	
 		
 		if(getOficina().getAeropuerto().equals("SI")) 

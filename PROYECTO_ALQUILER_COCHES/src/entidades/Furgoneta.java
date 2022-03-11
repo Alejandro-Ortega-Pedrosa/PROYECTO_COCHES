@@ -60,10 +60,14 @@ public class Furgoneta extends Combustion implements Serializable{
 	}
 
 	@Override
+	/**
+	 * CALCULA EL PRECIO DE ALQUILER DE UNA FURGONETA
+	 */
 	public double calculaAlquiler(int diferencia) {
 		
 		double precio=diferencia*70;
-		precio*=1+(getCategoria().getRecargo()/100);
+		
+		precio=(precio*getCategoria().getRecargo())/100;
 		
 		if(getOficina().getAeropuerto().equals("SI")) 
 		{

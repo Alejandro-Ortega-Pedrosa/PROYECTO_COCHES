@@ -22,10 +22,10 @@ import entidades.Vehiculo;
 
 public class Interfazdeusuario {
 
-	/*
-	 * PIDE DATOS DE EMPLEADO
-	 * DEVUELVE UN EMPLEADO 
-	 * EL MÉTODO PIDE LOS DATOS DE EMPLEADO
+	/**
+	 * PIDE LOS DATOS DE LA EMPRESA DEVUELVE UNA EMPRESA
+	 * @return EMPRESA
+	 * @throws Exception
 	 */
 	public static Empresa pideDatosEmpresa() throws Exception
 	{
@@ -36,10 +36,10 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE DATOS DE OFICINA
-	 * DEVUELVE UNA OFICINA
-	 * EL MÉTODO PIDE LOS DATOS DE LA OFICINA
+	/**
+	 * PIDE LOS DATOS DE UNA OFICINA Y DEVUELVE UNA OFICINA
+	 * @return OFICINA
+	 * @throws Exception
 	 */
 	public static Oficina pideDatosOficina() throws Exception
 	{
@@ -66,10 +66,10 @@ public class Interfazdeusuario {
 	}
 	
 
-	/*
-	 * PIDE DATOS DE CLIENTE
-	 * DEVUELVE UN CLIENTE 
-	 * EL MÉTODO PIDE LOS DATOS DEL CLIENTE
+	/**
+	 * PIDE LOS DATOS DE UN CLIENTE Y LO DEVUELVE
+	 * @return CLIENTE
+	 * @throws Exception
 	 */
 	public static Cliente pideDatosCliente() throws Exception 
 	{
@@ -88,10 +88,10 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE CARNET DED CONDUCIR
-	 * DEVUELVE UN CARNET DE CONDUCIR
-	 * EL METODO PIDE EL TIPO
+	/**
+	 * PIDE UN CARNET DE CONDUCIR Y LO DEVUELVE
+	 * @return CARNET_DE_CONDUCIR
+	 * @throws Exception
 	 */
 	public static Carnet_de_conducir pideCarnet() throws Exception
 	{
@@ -103,10 +103,11 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE DATOS DE EMPLEADO
-	 * DEVUELVE UN EMPLEADO 
-	 * EL MÉTODO PIDE LOS DATOS DE EMPLEADO
+	/**
+	 * PIDE LOS DATOS DE UN EMPLEADO Y LO DEVUELVE 
+	 * @param e
+	 * @return EMPLEADO
+	 * @throws Exception
 	 */
 	public static Empleado pideDatosEmpleado(Empresa e) throws Exception
 	{
@@ -125,10 +126,11 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE DATOS DE LA MOTO
-	 * DEVUELVE UNA MOTO
-	 * EL MÉTODO PIDE LOS DATOS DE LA NUEVA MOTO
+	/**
+	 * PIDE LOS DATOS DE UNA MOTO Y LA DEVUELVE
+	 * @param e
+	 * @return MOTO
+	 * @throws Exception
 	 */
 	public static Moto pideDatosMoto(Empresa e) throws Exception 
 	{
@@ -157,10 +159,11 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE DATOS DE EL COCHE ELECTRICO
-	 * DEVUELVE UN COCHE ELÉCTRICO
-	 * EL MÉTODO PIDE LOS DATOS DEL NUEVO COCHE ELÉCTRICO
+	/**
+	 * PIDE LOS DATOS DE UN COCHE ELÉCTRICO Y LO DEVUELVE
+	 * @param e
+	 * @return COCHE_ELECTRICO
+	 * @throws Exception
 	 */
 	public static Coche_electrico pideDatosCocheElectrico(Empresa e) throws Exception 
 	{
@@ -187,10 +190,11 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE DATOS DE LA FURGONETA
-	 * DEVUELVE UNA FURGONETA
-	 * EL MÉTODO PIDE LOS DATOS DE LA NUEVA FURGONETA
+	/**
+	 * PIDE LOS DATOS DE UNA FURGONETA Y LA DEVUELVE
+	 * @param e
+	 * @return FURGONETA
+	 * @throws Exception
 	 */
 	public static Furgoneta pideDatosFurgoneta(Empresa e) throws Exception 
 	{
@@ -217,10 +221,11 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE DATOS DEL COCHE DE COMBUSTIÓN
-	 * DEVUELVE UN COCHE DE COMBUSTIÓN
-	 * EL MÉTODO PIDE LOS DATOS DEL NUEVO COCHE DE COMBUSTIÓN
+	/**
+	 * PIDE LOS DATOS DE UN COCHE DE COMBUSTION Y LO DEVUELVE
+	 * @param e
+	 * @return COCHE_COMBUSTION
+	 * @throws Exception
 	 */
 	public static Coche_combustion pideDatosCocheCombustion(Empresa e) throws Exception 
 	{
@@ -247,9 +252,10 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE UNA CATEGORIA DE UN VEHÍCULO
-	 * EL METODO DEVUELVE UNA CATEGORÍA
+	/**
+	 * PIDE UNA CATEGORÍA Y LA DEVUELVE
+	 * @return CATEGORIA
+	 * @throws Exception
 	 */
 	public static Categoria pideCategoria() throws Exception
 	{
@@ -261,10 +267,11 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE DATOS ALQUILER
-	 * DEVUELVE UN ALQUILER REALIZADO
-	 * EL MÉTODO PIDE LOS DATOS DEL ALQUILER
+	/**
+	 * PIDE LOS DATOS DE UN ALQUILER Y LO DEVUELVE
+	 * @param e
+	 * @return ALQUILER
+	 * @throws Exception
 	 */
 	public static Alquiler pideDatosAlquiler(Empresa e) throws Exception 
 	{
@@ -314,8 +321,12 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * METODO QUE PIDE LOS DATOS DE LA DEVOLUCIÓN
+	/**
+	 * PIDE LOS DATOS DE UNA DEVOLUCION Y LA DEVUELVE
+	 * @param e
+	 * @param a
+	 * @return DEVOLUCION
+	 * @throws Exception
 	 */
 	public static Devolucion pideDatosDevolucion (Empresa e, Alquiler a) throws Exception
 	{
@@ -345,9 +356,9 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * PIDE FECHA
-	 * DEVUELVE UNA FECHA
+	/**
+	 * PIDE UNA FECHA Y LA DEVUELVE
+	 * @return
 	 */
 	public static Fecha pideFecha()
 	{
@@ -368,9 +379,12 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * EL METODO PIDE UNA OFICINA QUE EXISTE
-	 * EL METODO DEVUELVE UNA OFICINA
+	/**
+	 * PIDE UNA OFICINA QUE EXISTE Y LA DEVUELVE SI EXISTE 
+	 * SI NO EXISTE MUESTRA LA LISTA DE OFICINAS DISPONIBLES
+	 * @param e
+	 * @return OFICINA
+	 * @throws Exception
 	 */
 	public static Oficina pideOficinaExiste(Empresa e) throws Exception 
 	{
@@ -409,10 +423,12 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * EL METODO PIDE UN CLIENTE QUE EXISTE
-	 * SI EL CLIENTE NO EXISTE DA LA OPCIÓN DE MOSTRAR LA LISTA DE LOS CLIENTES DISPONIBLES
-	 * EL METODO DEVUELVE UN CLIENTE
+	/**
+	 * PIDE UN CLIENTE QUE EXISTE Y LO DEVUELVE SI EXISTE 
+	 * SI NO EXISTE MUESTRA LA LISTA DE CLIENTES DISPONIBLES
+	 * @param e
+	 * @return CLIENTE
+	 * @throws Exception
 	 */
 	public static Cliente pideClienteExiste(Empresa e) throws Exception 
 	{
@@ -451,10 +467,12 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * EL METODO PIDE UN EMPLEADO QUE EXISTE
-	 * SI EL EMPLEADO NO EXISTE DA LA OPCIÓN DE MOSTRAR LA LISTA DE LOS EMPLEADOS DISPONIBLES
-	 * EL METODO DEVUELVE UN EMPLEADO
+	/**
+	 * PIDE UN EMPLEADO QUE EXISTE Y LO DEVUELVE SI EXISTE 
+	 * SI NO EXISTE MUESTRA LA LISTA DE EMPLEADOS DISPONIBLES
+	 * @param e
+	 * @return EMPLEADO
+	 * @throws Exception
 	 */
 	public static Empleado pideEmpleadoExiste(Empresa e) throws Exception 
 	{
@@ -493,10 +511,12 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * EL METODO PIDE UNA MOTO QUE EXISTE
-	 * SI EL VEHÍCULOS NO EXISTE DA LA OPCIÓN DE MOSTRAR LA LISTA DE LOS VEHÍCULOS DISPONIBLES
-	 * EL METODO DEVUELVE UNA MOTO
+	/**
+	 * PIDE UNA MOTO QUE EXISTE Y LA DEVUELVE SI EXISTE 
+	 * SI NO EXISTE MUESTRA LA LISTA DE MOTOS DISPONIBLES
+	 * @param e
+	 * @return MOTO
+	 * @throws Exception
 	 */
 	public static Moto pideMotoExiste(Empresa e) throws Exception 
 	{
@@ -536,10 +556,12 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * EL METODO PIDE UN COCHE ELÉCTRICO QUE EXISTE
-	 * SI EL VEHÍCULO NO EXISTE DA LA OPCIÓN DE MOSTRAR LA LISTA DE LOS VEHÍCULOS DISPONIBLES
-	 * EL METODO DEVUELVE UN COCHE ELÉCTRICO
+	/**
+	 * PIDE UN COCHE ELÉTRICO QUE EXISTE Y LA DEVUELVE SI EXISTE 
+	 * SI NO EXISTE MUESTRA LA LISTA DE COCHES ELECTRICOS DISPONIBLES
+	 * @param e
+	 * @return COCHE_ELECTRICO
+	 * @throws Exception
 	 */
 	public static Coche_electrico pideCocheElectricoExiste(Empresa e) throws Exception 
 	{
@@ -579,10 +601,11 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * EL METODO PIDE UN COCHE COMBUSTION QUE EXISTE
-	 * SI EL VEHÍCULO NO EXISTE DA LA OPCIÓN DE MOSTRAR LA LISTA DE LOS VEHÍCULOS DISPONIBLES
-	 * EL METODO DEVUELVE UN COCHE DE COMBUSTIÓN
+	/**
+	 * PIDE UN COCHE DE COMBUSTION QUE EXISTE Y LO DEVUELVE SI EXISTE 
+	 * @param e
+	 * @return COCHE_COMBUSTION
+	 * @throws Exception
 	 */
 	public static Coche_combustion pideCocheCombustionExiste(Empresa e) throws Exception 
 	{
@@ -622,10 +645,12 @@ public class Interfazdeusuario {
 	}
 	
 	
-	/*
-	 * EL METODO PIDE UNA FURGONETA QUE EXISTE
-	 * SI EL VEHÍCULO NO EXISTE DA LA OPCIÓN DE MOSTRAR LA LISTA DE LOS VEHÍCULOS DISPONIBLES
-	 * EL METODO DEVUELVE UNA FURGONETA
+	/**
+	 * PIDE UNA FURGONETA QUE EXISTE Y LA DEVUELVE SI EXISTE 
+	 * SI NO EXISTE MUESTRA LA LISTA DE FURGONETAS DISPONIBLES
+	 * @param e
+	 * @return FURGONETA
+	 * @throws Exception
 	 */
 	public static Furgoneta pideFurgonetaExiste(Empresa e) throws Exception 
 	{

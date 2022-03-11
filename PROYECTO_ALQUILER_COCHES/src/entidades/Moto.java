@@ -58,9 +58,13 @@ public class Moto extends Electrico implements Serializable{
 
 
 	@Override
+	/**
+	 * CALCULA EL PRECIO DE ALQUILER DE UNA MOTO
+	 */
 	public double calculaAlquiler(int diferencia) {
 
-		double precio=diferencia*10;			     
+		double precio=diferencia*10;	
+		precio=(precio*getCategoria().getRecargo())/100;
 		precio*=1.15;	
 		
 		if(getOficina().getAeropuerto().equals("SI")) 

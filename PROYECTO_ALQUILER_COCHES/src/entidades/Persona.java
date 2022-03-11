@@ -128,7 +128,10 @@ abstract class Persona implements Comparable<Persona>, Serializable{
 		return("DNI: "+dni+" | NOMBRE: "+nombre+" | APELLIDOS: "+apellido1+" "+apellido2);
 	}
 	
-	//METODO NOMBRE COMPLETO
+	/**
+	 * EL MÉTODO DEVUELVE UNA STRING CON EL NOMBRE EN EL FORMATO APELLIDO1+APELLIDO2+NOMBRE
+	 * @return
+	 */
 	public String nombreCompleto() {
 	
 		String nombreYapellidos=apellido1+" "+apellido2+" "+nombre;

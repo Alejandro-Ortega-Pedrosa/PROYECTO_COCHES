@@ -57,17 +57,25 @@ public class Coche_combustion extends Combustion implements Serializable{
 	}
 
 
-	//METODO PARA CALCULAR EL ALQUILER
+	
 	@Override
+	/**
+	 * MÉTODO PARA CALCULAR EL PRECIO DEL COCHE DE COMBUSTIÓN
+	 */
 	public double calculaAlquiler(int diferencia) {
 		
 		double precio=diferencia*50;
-		precio*=1+(getCategoria().getRecargo()/100);
+		double porcentaje=(precio*getCategoria().getRecargo())/100;
+		double recargo=0;
+		
+		precio=porcentaje+precio;
 		
 		if(getOficina().getAeropuerto().equalsIgnoreCase("SI")) 
 		{
-			precio*=1.1;
+			recargo=precio*=1.1;
 		}
+		
+		precio=porcentaje+recargo+precio;
 		
 		return precio;
 	}

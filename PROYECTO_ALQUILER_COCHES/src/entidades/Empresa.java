@@ -51,10 +51,6 @@ public class Empresa implements Serializable{
 		
 	}
 	
-	
-
-	
-
 
 	//CONSTRUCTOR CON SOLO CLIENTES
 	public Empresa(String nombre) {
@@ -201,9 +197,9 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/* 
-	 * METODO PARA GRABAR LA EMPRESA
-	 * NECESITA UNA EMPRESA PARA TRABAJAR
+	/**
+	 * METODO QUE GRABA LA EMPRESA
+	 * @param empresa
 	 */
 	public static void grabaEmpresa(Empresa empresa) {
 		
@@ -225,8 +221,10 @@ public class Empresa implements Serializable{
 		
 	}
 	
-	/*
+	/**
 	 * METODO PARA LEER LA EMPRESA
+	 * @return
+	 * @throws Exception
 	 */
 	public static Empresa leeEmpresa() throws Exception {
 		
@@ -264,9 +262,10 @@ public class Empresa implements Serializable{
 	
 	
 	
-	/* METODO PARA BORRAR UN EMPLEADO
-	 * BORRA UN EMPLEADO DEL TREE
-	 * NECESITA UN DNI PARA BORRARLO
+	/**
+	 * METODO PARA BORRAR UN EMPLEADO DEL TREE
+	 * NECESITA UN DNI PARA SABER EL EMPLEADO QUE BORRAR
+	 * @param dni
 	 */
 	public void borraEmpleado(String dni) {
 		
@@ -275,10 +274,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BORRAR UN CLIENTE
-	 * BORRA UN CLIENTE DEL TREE
-	 * NECESITA UN DNI PARA BORRARLO
+	/**
+	 * METODO PARA BORRAR UN CLIENTE DEL TREE
+	 * NECESITA UN DNI PARA SABER EL CLIENTE QUE BORRAR
+	 * @param dni
 	 */
 	public void borraCliente(String dni) {
 		
@@ -286,20 +285,20 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BORRAR UN VEHÍCULO
-	 * BORRA UN VEHÍCULO DEL TREE 
-	 * NECESITA UNA MATRÍCULA PARA BORRARLO
+	/**
+	 * METODO PARA BORRAR UN VEHICULO DEL TREE
+	 * NECESITA UNA MATRÍCULA PARA SABER EL VEHÍCULO QUE BORRAR
+	 * @param matricula
 	 */
 	public void borraVehiculo(String matricula) {
 			
 		vehiculos.remove(matricula);
 	}
 	
-	/*
-	 * METODO PARA BORRAR UN VEHÍCULO
-	 * BORRA UN VEHÍCULO DEL TREE 
-	 * NECESITA UNA MATRÍCULA PARA BORRARLO
+	/**
+	 * METODO PARA BORRAR UNA MOTO DEL TREE
+	 * NECESITA UNA MATRÍCULA PARA SABER LA MOTO QUE BORRAR
+	 * @param matricula
 	 */
 	public void borraMoto(String matricula) {
 			
@@ -307,10 +306,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BORRAR UN VEHÍCULO
-	 * BORRA UN VEHÍCULO DEL TREE 
-	 * NECESITA UNA MATRÍCULA PARA BORRARLO
+	/**
+	 * METODO PARA BORRAR UN COCHE ELÉCTRICO DEL TREE
+	 * NECESITA UNA MATRÍCULA PARA SABER EL COCHE ELÉCTRICO QUE BORRAR
+	 * @param matricula
 	 */
 	public void borraCocheElectrico(String matricula) {
 			
@@ -318,10 +317,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BORRAR UN VEHÍCULO
-	 * BORRA UN VEHÍCULO DEL TREE 
-	 * NECESITA UNA MATRÍCULA PARA BORRARLO
+	/**
+	 * METODO PARA BORRAR UN COCHE DE COMBUSTIÓN DEL TREE
+	 * NECESITA UNA MATRÍCULA PARA SABER EL COCHE DE COMBUSTIÓN QUE BORRAR
+	 * @param matricula
 	 */
 	public void borraCocheCombustion(String matricula) {
 			
@@ -329,20 +328,20 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BORRAR UN VEHÍCULO
-	 * BORRA UN VEHÍCULO DEL TREE 
-	 * NECESITA UNA MATRÍCULA PARA BORRARLO
+	/**
+	 * METODO PARA BORRAR UNA FURGONETA DEL TREE
+	 * NECESITA UNA MATRÍCULA PARA SABER LA FURGONETA QUE BORRAR
+	 * @param matricula
 	 */
 	public void borraFurgoneta(String matricula) {
 			
 		furgonetas.remove(matricula);
 	}
 	
-	/*
-	 * METODO PARA BORRAR UNA OFICINA
-	 * BORRA UNA OFICINA DEL TREE
-	 * NECESITA EL CÓDIGO DE LA OFICINA PARA BORRARLA
+	/**
+	 * METODO PARA BORRAR UNA OFICINA DEL TREE
+	 * NECESITA EL CÓDIGO PARA SABER LA OFICINA QUE BORRAR
+	 * @param codigo
 	 */
 	public void borraOficina(String codigo) {
 				
@@ -350,10 +349,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BORRAR UN VEHÍCULO DE LA LISTA DE ALQUILADOS PORQUE DEJA DE ESTAR ALQUILADO
-	 * BORRA UN VEHÍCULO DEL TREE
-	 * NECESITA LA MATRÍCULA DEL VEHÍCULO QUE SE VA A BORRAR
+	/**
+	 * METODO PARA BORRAR UN VEHICULO DEL TREE DE ALQUILADOS
+	 * NECESITA UNA MATRÍCULA PARA SABER EL VEHÍCULO QUE BORRAR
+	 * @param matricula
 	 */
 	public void borraVehiculoDeAlquilados(String matricula) {
 		
@@ -361,9 +360,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BUSCAR UN EMPLEADO
-	 * DEVUELVE UN EMPLEADO SI LO ENCUENTRA SI NO DEVUELVE NULL
+	/**
+	 * EL METODO BUSCA UN EMPLEADO POR SU DNI Y LO DEVUELVE
+	 * @param dni
+	 * @return EMPLEADO
 	 */
 	public Empleado buscaEmpleado(String dni) {
 		
@@ -371,10 +371,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BUSCAR UN CLIENTE
-	 * DEVUELVE EL CLIENTE SI LO ENCUENTRA SI NO DEVUELVE NULL
-	 * LO BUSCA POR EL DNI
+	/**
+	 * EL METODO BUSCA UN CLIENTE POR SU DNI Y LO DEVUELVE
+	 * @param dni
+	 * @return CLIENTE
 	 */
 	public Cliente buscaCliente(String dni) {
 		
@@ -382,10 +382,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BUSCAR UN VEHÍCULO
-	 * DEVUELVE EL VEHÍCULO SI LO ENCUENTRA SI NO DEVUELVE UN NULL
-	 * LO BUSCA POR LA MATRÍCULA
+	/**
+	 * EL METODO BUSCA UN VEHÍCULO POR SU MATRICULA Y LO DEVUELVE
+	 * @param matricula
+	 * @return VEHICULO
 	 */
 	public Vehiculo buscaVehiculo(String matricula) {
 		
@@ -393,10 +393,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BUSCAR UN VEHÍCULO
-	 * DEVUELVE EL VEHÍCULO SI LO ENCUENTRA SI NO DEVUELVE UN NULL
-	 * LO BUSCA POR LA MATRÍCULA
+	/**
+	 * EL METODO BUSCA UNA MOTO POR SU MATRÍCULA Y LA DEVUELVE
+	 * @param matricula
+	 * @return MOTO
 	 */
 	public Moto buscaMoto(String matricula) {
 		
@@ -404,10 +404,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BUSCAR UN VEHÍCULO
-	 * DEVUELVE EL VEHÍCULO SI LO ENCUENTRA SI NO DEVUELVE UN NULL
-	 * LO BUSCA POR LA MATRÍCULA
+	/**
+	 * EL METODO BUSCA UN COCHE DE COMBUSTION POR SU MATRICULA Y LO DEVUELVE
+	 * @param matricula
+	 * @return COCHE_COMBUSTION
 	 */
 	public Coche_combustion buscaCocheCombustion(String matricula) {
 		
@@ -415,10 +415,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BUSCAR UN VEHÍCULO
-	 * DEVUELVE EL VEHÍCULO SI LO ENCUENTRA SI NO DEVUELVE UN NULL
-	 * LO BUSCA POR LA MATRÍCULA
+	/**
+	 * EL METODO BUSCA UN COCHE ELECTRICO POR SU MATRÍCULA Y LO DEVUELVE
+	 * @param matricula
+	 * @return COCHE_ELECTRICO
 	 */
 	public Coche_electrico buscaCocheElectrico(String matricula) {
 		
@@ -426,10 +426,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BUSCAR UN VEHÍCULO
-	 * DEVUELVE EL VEHÍCULO SI LO ENCUENTRA SI NO DEVUELVE UN NULL
-	 * LO BUSCA POR LA MATRÍCULA
+	/**
+	 * EL METODO BUSCA UNA FURGONETA POR SU MATRÍCULA Y LA DEVUELVE
+	 * @param matricula
+	 * @return FURGONETA
 	 */
 	public Furgoneta buscaFurgoneta(String matricula) {
 		
@@ -437,10 +437,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * METODO PARA BUSCAR UNA OFICINA
-	 * DEVUELVE UNA OFICINA
-	 * LA BUSCA POR SU CÓDIGO
+	/**
+	 * EL METODO BUSCA UNA OFICINA POR SU CÓDIGO Y LA DEVUELVE
+	 * @param codigo
+	 * @return OFICINA
 	 */
 	public Oficina buscaOficina(String codigo) {
 		
@@ -452,8 +452,10 @@ public class Empresa implements Serializable{
 		return alquileres.get(codigo);
 	}
 	
-	/*
-	 * AÑADE VEHÍCULOS AL TREE DE VEHÍCULOS DISPONIBLES
+	/**
+	 * AÑADE UN VEHÍCULO AL TREE DE VEHÍCULOS DISPONIBLES
+	 * @param e
+	 * @throws Exception
 	 */
 	public void addVehiculo(Empresa e) throws Exception {
 		
@@ -507,61 +509,69 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * AÑADE VEHÍCULOS A NO DISPONIBLES
-	 * PARA ELLO NECESITA UN VEHÍCULO Y SU MATRICULA
+	/**
+	 * AÑADE UN VEHÍCULO A NO DISPONIBLES NECESITA UN VEHÍCULO Y SU MATRÍCULA
+	 * @param v
+	 * @param matricula
 	 */
 	public void addVehiculo(Vehiculo v, String matricula) {
 		vehiculos.put(matricula, v);
 	}
 	
 	
-	/*
+	/**
 	 * AÑADE UNA MOTO AL TREE DE MOTOS
-	 * PARA ELLO NECESITA UNA MOTO Y SU MATRICULA
+	 * @param m
+	 * @param matricula
 	 */
 	public void addMoto(Moto m, String matricula) {
 		motos.put(matricula, m);
 	}
 	
 	
-	/*
-	 * AÑADE UN COCHE ELÉCTRICO AL TREE DE COCHES ELECTRICOS
-	 * PARA ELLO NECESITA UN COCHE ELÉCTRICO Y SU MATRICULA
+	/**
+	 * AÑADE UNA MOTO AL TREE DE COCHES ELECTRICOS
+	 * @param ce
+	 * @param matricula
 	 */
 	public void addCocheElectrico(Coche_electrico ce, String matricula) {
 		cocheselectricos.put(matricula, ce);
 	}
 	
 	
-	/*
+	/**
 	 * AÑADE UN COCHE DE COMBUSTIÓN AL TREE DE COCHES DE COMBUSTIÓN
-	 * PARA ELLO NECESITA UN COCHE DE COMBUSTIÓN Y SU MATRICULA
+	 * @param cc
+	 * @param matricula
 	 */
 	public void addCocheCombustion(Coche_combustion cc, String matricula) {
 		cochescombustion.put(matricula, cc);
 	}
 	
 	
-	/*
-	 * AÑADE UNA FURGONETA AL TREE DE FURGONETAS
-	 * PARA ELLO NECESITA UNA FURGONETA Y SU MATRICULA
+	/**
+	 * AÑADE UNA FURGONETA AL TREE DE FURGONETAS 
+	 * @param f
+	 * @param matricula
 	 */
 	public void addFurgoneta(Furgoneta f, String matricula) {
 		furgonetas.put(matricula, f);
 	}
-	/*
-	 * AÑADE VEHÍCULOS A NO DISPONIBLES
-	 * PARA ELLO NECESITA UN VEHÍCULO Y SU MATRICULA
+	
+	
+	/**
+	 * AÑADE UN VEHÍCULO A NO DISPONIBLES 
+	 * @param v
+	 * @param matricula
 	 */
 	public void addVehiculoAlquilado(Vehiculo v, String matricula) {
 		alquilados.put(matricula, v);
 	}
 	
 	
-	/*
-	 * AÑADE CLIENTES AL TREE DE EMPRESA
-	 * PARA ELLO LLAMA AL METODO DE PIDEDATOSCLIENTE
+	/**
+	 * AÑADE UN CLIETE AL TREE DE CLIENTES
+	 * @throws Exception
 	 */
 	public void addCliente() throws Exception{
 		
@@ -572,9 +582,9 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * AÑADE OFICINAS AL TREE DE EMPRESA
-	 * PARA ELLO LLAMA AL METODO DE PIDEDATOSOFICINA
+	/**
+	 * AÑADE UNA OFICINA AL TREE DE OFICINAS
+	 * @throws Exception
 	 */
 	public void addOficina() throws Exception{
 		
@@ -585,9 +595,10 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * AÑADE EMPLEADOS AL TREE DE EMPRESA
-	 * PARA ELLO LLAMA AL METODO DE PIDEDATOSEMPLEADO
+	/**
+	 * AÑADE UN EMPLEADO AL TREE DE EMPLEADOS
+	 * @param e
+	 * @throws Exception
 	 */
 	public void addEmpleado(Empresa e) throws Exception{
 		
@@ -611,8 +622,9 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * PINTA LISTA DE CLIENTES 
+
+	/**
+	 * PINTA LA LISTA DE CLIENTES
 	 */
 	public void pintaListadeClientes() 
 	{
@@ -626,7 +638,7 @@ public class Empresa implements Serializable{
 	}
 		
 	
-	/*
+	/**
 	 * PINTA LISTA DE EMPLEADOS 
 	 */
 	public void pintaListadeEmpleados() 
@@ -640,7 +652,7 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
+	/**
 	 * PINTA LISTA DE VEHICULOS DISPONIBLES
 	 */
 	public void pintaListadeVehiculos() 
@@ -654,44 +666,7 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
-	 * PINTA LISTA DE VEHICULOS DE UNA CATEGORÍA
-	 */
-	public void pintaListadeVehiculosPorCategoria(String codigo) 
-	{
-		for(Entry<String, Vehiculo> item: vehiculos.entrySet()) 
-		{
-			String matricula = item.getKey();
-			Vehiculo vehiculo = item.getValue();
-			
-			//if(vehiculo.getCategoria().getCodigo().compareToIgnoreCase(codigo)==0) {
-				
-				System.out.println(vehiculo); //PINTA LOS VEHÍCULOS DE UNA SOLA CATEGORÍA
-			//}
-		
-		}
-	}
-	
-	
-	/*
-	 * PINTA LISTA DE VEHICULOS POR OFICINA
-	 */
-	public void pintaListadeVehiculosPorOficina(String codigo) 
-	{
-		for(Entry<String, Vehiculo> item: vehiculos.entrySet()) 
-		{
-			String matricula = item.getKey();
-			Vehiculo vehiculo = item.getValue();
-			
-			if(vehiculo.getOficina().getCodigo().compareToIgnoreCase(codigo)==0) {
-				
-				System.out.println(vehiculo); //PINTA LOS VEHÍCULOS DE UNA SOLA OFICINA
-			}
-		}
-	}
-	
-	
-	/*
+	/**
 	 * PINTA LISTA DE VEHICULOS NO DISPONIBLES
 	 */
 	public void pintaListadeVehiculosNoDisponibles() 
@@ -705,7 +680,7 @@ public class Empresa implements Serializable{
 	}
 	
 	
-	/*
+	/**
 	 * PINTA LISTA DE OFICINAS
 	 */
 	public void pintaListadeOficinas() 
